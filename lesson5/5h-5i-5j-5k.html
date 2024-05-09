@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>5h 5i 5j 5k</title>
+  <style>
+    button{
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <p>
+    Cart Quantity
+  </p>
+  <button onclick="
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    Show Quantity
+  </button>
+  <button onclick="
+  qty += 1;
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    Add to Cart
+  </button>
+  <button onclick="
+  qty += 2;
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    +2
+  </button>
+  <button onclick="
+    qty += 3;
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    +3
+  </button>
+  <button onclick="
+    qty += 4;
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    +4
+  </button>
+  <button onclick="
+    qty += 5;
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    +5
+  </button>
+  <button onclick="
+  qty--;
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    Remove from Cart
+  </button>
+  <button onclick="
+  qty-=2;
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    -2
+  </button>
+  <button onclick="
+    qty-=3;
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    -3
+  </button>
+  <button onclick="
+  qty = 0;
+  console.log('Cart was reset.');
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    Reset Cart
+  </button>
+  <script>
+    let qty = 0;
+
+  </script>
+</body>
+
+</html>

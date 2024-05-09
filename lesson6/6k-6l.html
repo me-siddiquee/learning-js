@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>6k 6l</title>
+  <style>
+    button {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+
+<body>
+  <p>
+    Cart Quantity
+  </p>
+  <button onclick="
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    Show Quantity
+  </button>
+  <button onclick="
+  qty += 1;
+  if(qty > 10){
+    alert('Cart is full!');
+    qty -=1 ;
+  }
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    Add to Cart
+  </button>
+  <button onclick="
+  qty += 2;
+  if(qty > 10){
+    alert('Cart is full!');
+    qty -= 2;
+  }
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    +2
+  </button>
+  <button onclick="
+  qty += 3;
+    if(qty >= 10){
+    alert('Cart is full!');
+    qty -= 3;
+  }
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    +3
+  </button>
+  <button onclick="
+    qty += 4;
+    if(qty >=10){
+      alert('Cart is full!');
+      qty -= 4;
+    }
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    +4
+  </button>
+  <button onclick="
+    qty += 5;
+    if(qty >= 10){
+      alert('Cart is full!');
+      qty -=5;
+    }
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    +5
+  </button>
+  <button onclick="
+  qty--;
+  if (qty<0){
+    alert('Not enough items in the cart!');
+    qty++;
+  }
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    Remove from Cart
+  </button>
+  <button onclick="
+  qty-=2;
+  if (qty<0){
+    alert('Not enough items in the cart!');
+    qty+=2;
+  }
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    -2
+  </button>
+  <button onclick="
+    qty-=3;
+    if (qty<0){
+    alert('Not enough items in the cart!');
+    qty+=3;
+  }
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    -3
+  </button>
+  <button onclick="
+  qty = 0;
+  console.log('Cart was reset.');
+  console.log(`Cart Quantity: ${qty}`);
+  ">
+    Reset Cart
+  </button>
+  <script>
+    let qty = 0;
+
+  </script>
+</body>
+
+</html>
