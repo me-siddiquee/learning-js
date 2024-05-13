@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>9i</title>
+  <style>
+    button {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <button onclick="
+      showCartQuantity();
+    ">Show Quantity</button>
+
+  <button onclick="
+      updateCartQuantity(1, '+');
+      showCartQuantity();
+    ">Add to Cart</button>
+
+  <button onclick="
+      updateCartQuantity(2, '+');
+      showCartQuantity();
+    ">+2</button>
+
+  <button onclick="
+      updateCartQuantity(3, '+');
+      showCartQuantity();
+    ">+3</button>
+
+  <button onclick="
+      updateCartQuantity(4, '+');
+      showCartQuantity();
+    ">+4</button>
+
+  <button onclick="
+      updateCartQuantity(5, '+');
+      showCartQuantity();
+    ">+5</button>
+
+  <!-- vvv This code was changed. vvv -->
+  <button onclick="
+      updateCartQuantity(1, '-')
+      showCartQuantity();
+    ">Remove from cart</button>
+
+  <button onclick="
+      updateCartQuantity(2,'-');
+      showCartQuantity();
+    ">-2</button>
+
+  <button onclick="
+      updateCartQuantity(3, '-');
+      showCartQuantity();
+    ">-3</button>
+  <!-- ^^^ This code was changed. ^^^ -->
+
+  <button onclick="
+      cartQuantity = 0;
+      showCartQuantity();
+    ">Reset Cart</button>
+
+  <p class="cart-quantity">Cart Quantity: 0</p>
+
+  <script>
+    let cartQuantity = 0;
+    function updateCartQuantity(updatedQty, sign) {
+      if (sign === '+') {
+        if (cartQuantity + updatedQty > 10) {
+          alert('The cart is full');
+        } else {
+          cartQuantity += updatedQty;
+          console.log(`Cart quantity: ${cartQuantity}`);
+        }
+      } else if (sign === '-') {
+        if (cartQuantity - updatedQty < 0) {
+          alert('Not enough items in the cart');
+        } else {
+          cartQuantity -= updatedQty;
+          console.log(`Cart quantity: ${cartQuantity}`);
+        }
+      }
+    }
+    function showCartQuantity() {
+      document.querySelector('.cart-quantity').innerHTML = `Cart Quantity: ${cartQuantity}`;
+    }
+  </script>
+</body>
+
+</html>

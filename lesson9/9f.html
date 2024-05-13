@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>9f</title>
+</head>
+
+<body>
+  <input type="text" class="js-name" onkeydown="
+  if(event.key === 'Enter'){
+    displayName();
+  }
+">
+  <button onclick="
+    displayName();">Submit</button>
+  <p class="js-message"></p>
+  <script>
+    function displayName() {
+      const name = document.querySelector('.js-name').value;
+      document.querySelector('.js-message').innerHTML = `Your name is ${name}`;
+    }
+  </script>
+</body>
+
+</html>
